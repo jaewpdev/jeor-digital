@@ -11,6 +11,15 @@ const config: Config = {
       padding: '2rem',
     },
     extend: {
+      colors: {
+        brand: {
+          black: '#050505',
+          blue:  '#5EB0D6',
+          brown: '#a95f4d',
+          beige: '#d0a465',
+          white: '#fdf6eb',
+        },
+      },
       fontFamily: {
         sans: ['var(--font-cormorant)'],
         mono: ['var(--font-inter)'],

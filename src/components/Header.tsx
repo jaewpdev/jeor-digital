@@ -1,9 +1,15 @@
+import { Animate } from '@/hooks/Animate';
 import Logo from './Logo';
+import NavMenu from './NavMenu';
 
 export default function Header() {
   return (
-    <div className="container mx-auto py-4">
+    <Animate
+      className="container mx-auto py-4 flex justify-between items-center"
+      variant="fadeUp"
+    >
       <Logo />
-    </div>
+      <NavMenu />
+    </Animate>
   );
 }
