@@ -11,6 +11,10 @@
   @apply font-medium font-mono uppercase
 }
 
+h1 {
+  @apply text-[9vw] leading-[7vw] tracking-tight uppercase;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
