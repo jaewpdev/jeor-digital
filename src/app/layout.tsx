@@ -2,7 +2,6 @@ import { Cormorant, Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
-import NavMenuList from '@/components/NavMenu';
 
 const inter = Inter({
   subsets: ['latin'],

@@ -21,7 +21,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-cormorant)'],
+        sans: ['var(--font-inter)'],
         mono: ['var(--font-inter)'],
       },
     },

@@ -2,17 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .hover-blue {
-  @apply hover:text-blue-500 transition-colors duration-300
+  @apply hover:text-blue-500 transition-colors duration-300;
 }
 
 .text-h6 {
-  @apply font-medium font-mono uppercase
+  @apply font-medium font-mono uppercase;
 }
 
 h1 {
-  @apply text-[9vw] leading-[7vw] tracking-tight uppercase;
+  @apply text-[9vw] xl:text-[120px] leading-[7.5vw] xl:leading-[110px] tracking-tight uppercase font-mono;
+}
+
+p {
+  @apply text-lg leading-[22px];
 }
 
 /* :root {
