@@ -21,38 +21,32 @@ export default function Accordion({
 
   function toggleAccordion() {
     setActive((prevState) => !prevState);
+    
+    // We'll initiate the height change first so it happens simultaneously with the scroll
     // @ts-ignore
     setHeight(active ? "0px" : `${contentSpace.current.scrollHeight}px`);
+    
     setRotate(
       active
         ? "transform duration-300 ease"
         : "transform duration-300 ease rotate-180"
     );
-
+  
     setTimeout(() => {
-      // Check if the screen width falls within mobile or tablet range
-      if (
-        window.innerWidth <= 1024 &&
-        !active &&
-        accordionRef.current &&
-        contentSpace.current
-      ) {
-        const accordionBottomPosition =
-          contentSpace.current.getBoundingClientRect().bottom +
-          window.scrollY;
-        const viewportHeight = window.innerHeight + window.scrollY;
-        const hiddenContentHeight = accordionBottomPosition - viewportHeight;
-
-        if (hiddenContentHeight > 0) {
-          // There's content out of the viewport. Scroll just enough to reveal it.
-          window.scrollTo({
-            top: window.scrollY + hiddenContentHeight,
-            behavior: "smooth",
+      if (!active && accordionRef.current) {
+        const accordionBottomPosition = accordionRef.current.getBoundingClientRect().bottom;
+        const viewportHeight = window.innerHeight;
+  
+        if (viewportHeight - accordionBottomPosition <= 200) {
+          window.scrollBy({
+            top: 300,
+            behavior: "smooth"
           });
         }
       }
-    }, 300);
+    }, 10); // Give a short delay to ensure the updated height starts transitioning
   }
+  
 
   return (
     <button
