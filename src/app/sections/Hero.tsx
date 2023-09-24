@@ -1,11 +1,10 @@
 "use client";
 
 import { Animate } from "@/hooks/Animate";
-import ImgAbstract1 from "../../../public/img--abstract-1.svg";
 
 export default function Hero() {
   return (
-    <section className="h-screen flex">
+    <section className="h-screen flex container mx-auto">
       <div className="w-screen flex flex-col lg:flex-row justify-between mt-auto mb-12 gap-4">
         <div>
           <Animate variant="slideUp">

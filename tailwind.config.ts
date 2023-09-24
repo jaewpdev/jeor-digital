@@ -18,6 +18,7 @@ const config: Config = {
           brown: '#a95f4d',
           beige: '#d0a465',
           white: '#fdf6eb',
+          "soft-blue": "#e6f6ff"
         },
       },
       fontFamily: {

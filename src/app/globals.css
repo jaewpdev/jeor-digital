@@ -10,10 +10,17 @@
   @apply font-medium font-mono uppercase;
 }
 
+.text-h5 {
+  @apply text-[28px] lg:text-[3vw] xl:text-[28px] leading-[30px] tracking-tight uppercase font-mono;
+}
+
 h1 {
   @apply text-[9vw] xl:text-[120px] leading-[7.5vw] xl:leading-[110px] tracking-tight uppercase font-mono;
 }
 
+h5 {
+  @apply text-[28px] lg:text-[3vw] xl:text-[28px] leading-[30px] tracking-tight uppercase font-mono;
+}
 p {
   @apply text-lg leading-[22px];
 }
